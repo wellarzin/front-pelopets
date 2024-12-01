@@ -30,7 +30,7 @@ export function InputPesquisa({ setPets }: InputPesquisaProps) {
   }
 
   async function mostraDestaques() {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL_API}/pets`)
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL_API}/pets/destaques`)
     const dados = await response.json()
     setPets(dados)
     reset({termo: ""})
